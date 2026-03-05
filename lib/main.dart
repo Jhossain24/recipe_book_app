@@ -6,11 +6,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp;
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'The Greatest Recipe Book ever',
+      theme: ThemeData(
+        primarySwatch: Colors.white,
+        useMaterial3: true,
+      ),
+    );
   }
 }
