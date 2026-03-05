@@ -20,7 +20,7 @@ flutter:
   
   assets:
     - assets/images/
-    - assets/images/pasta.jpg
-    - assets/images/salad.jpg
-    - assets/images/cookies.jpg
-    - assets/images/grilledcheese.jpg //i added 4 images  
+    - assets/images/toast.jpg
+    - assets/images/cereal.jpg
+    - assets/images/egg.jpg
+    - assets/images/sandwich.jpg  
