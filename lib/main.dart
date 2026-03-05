@@ -11,11 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'The Greatest Recipe Book ever',
+      title: 'Recipe Book',
       theme: ThemeData(
-        primarySwatch: Colors.white,
+        primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
+      home: const HomeScreen(),
+      debugShowCheckedModeBanner: false, // debug banner removed
     );
   }
 }
