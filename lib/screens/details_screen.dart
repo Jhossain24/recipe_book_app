@@ -1,27 +1,28 @@
-import 'package:flutter/material.dart'
+import 'package:flutter/material.dart';
 import '../models/recipe.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Recipe recipe;
   
-  const DetailsScreen({super.key required this.recipe});
+  const DetailsScreen({super.key, required this.recipe});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(recipe.title),
+        title: Text(recipe.name),
         backgroundColor: Colors.blue,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // image here
             Image.asset(
               recipe.imagePath,
               height: 250,
               width: double.infinity,
-              fit: BoxFit.cover
+              fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
                 return Container(
                   height: 250,
@@ -38,6 +39,7 @@ class DetailsScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // the ingredients section
                   const Text(
                     'Ingredients:',
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
@@ -58,6 +60,7 @@ class DetailsScreen extends StatelessWidget {
                   
                   const SizedBox(height: 24),
                   
+                  // the instructions section
                   const Text(
                     'Instructions:',
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
